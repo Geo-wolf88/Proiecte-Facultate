@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Formular Link</title>
+</head>
+<body>
+<form action="/link/adauga" method="post" enctype="multipart/form-data">
+ {{ csrfField() }}
+ <label for="llink">Link:</label><br/>
+  <input type="text" id="llink" name="llink"/><br/>
+  <label for="lmesaj">Mesaj:</label><br/>
+  <input type="text" id="lmesaj" name="lmesaj"/><br/>
+  <label for="lfis">Fisier:</label><br/>
+  <input type="file" id="lfis" name="lfis"/><br/>
+  <input type="submit" />
+</form>
+</body>
+</html>

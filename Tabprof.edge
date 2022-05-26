@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  </meta>
+  <title>Tabel Profesori</title>
+  <style>
+h1 {
+  text-align: center;
+}
+    table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid black;
+}
+
+tr:nth-child(even){background-color:#ADD8E6}
+
+th {
+  background-color:#30D5C8s;
+  color: black;
+}
+</style>
+
+</head>
+<body style="background-color:#ADD8E6;">
+<h1 style="border:2px solid DodgerBlue;"> Tabel Profesori </h1>
+<table>
+
+<tr>
+  <th>Id</th>
+  <th>Nume</th>
+  <th>Prenume</th>
+  <th>Data Nasterii</th>
+  <th>Doctorat</th>
+  <th>Vechime</th>
+  <th>Stare Civila</th>
+<th>Actiuni</th>
+</tr>
+  @each(profesor in prof )
+  <tr>
+    <td>{{profesor.id}}</td>
+    <td>{{profesor.Nume}} </td>
+    <td>{{profesor.Prenume}}</td>
+    <td>{{profesor['Data Nasterii']}}</td>
+    <td>{{profesor.Doctorat}}</td>
+    <td>{{profesor.Vechime}} </td>
+    <td>{{profesor.StareCiv}}</td>
+  <td><a href="/Students/tabel/prof/sterge?id={{profesor.id}}" >Sterge</a></td>
+  </tr>
+  @endeach
+
+
+
+
+
+</table>
+</body>
+</html>

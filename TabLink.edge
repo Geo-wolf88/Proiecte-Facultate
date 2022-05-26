@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabel Linkuri</title>
+</head>
+<body>
+<table style="width:40% border: 1px solid black text-align: left border-spacing: 5px">
+<tr>
+  <th>Link</th>
+  <th>Mesaj</th>
+  <th>Fisier</th>
+@each(feed in feeds )
+  <tr>
+    <td>{{feed.Link}}</td>
+    <td>{{feed.Mesaj}} </td>
+    <td>{{feed.Fisier}}</td>
+
+
+     </tr>
+  @endeach
+</tr>
+
+</table>
+</body>
+</html>

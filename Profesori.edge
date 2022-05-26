@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> </meta>
+  <title>Profesori</title>
+<style>
+  h1 {
+  text-align: center;
+  font-family: "Brush Script MT", Cursive;
+  border:2px solid DodgerBlue;
+}
+form{
+text-align: center;
+  font-family: "Brush Script MT", Cursive;
+  font-size: 25px;
+   word-spacing: 10px;
+
+}
+input[type=button], input[type=submit], input[type=reset] {
+  background-color:  #30D5C8;
+   border: 2px solid black;
+  border-radius: 5px;
+  color: black;
+  font-family: "Brush Script MT", Cursive;
+  font-size: 15px;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body style="background-color:#ADD8E6;">
+<h1> Formular Profesori</h1>
+<form action="/Students/adauga/profesori" method="post">
+  {{ csrfField() }}
+  <label for="fname">Nume:</label><br/>
+  <input type="text" id="fname" name="fname"/><br/>
+  <label for="lname">Prenume:</label><br/>
+  <input type="text" id="lname" name="lname"/><br/>
+  <label for="lname">Data Nasterii:</label><br/>
+  <input type="text" id="ldat" name="ldat"/><br/>
+  <label for="lname">Doctorat:</label><br/>
+  <input type="text" id="doc" name="doc"/><br/>
+  <label for="lname">Vechime:</label><br/>
+  <input type="text" id="old" name="old"/><br/>
+  <label for="lname">Stare Civila:</label><br/>
+  <input type="text" id="stciv" name="stciv"/><br/>
+
+  <input type="submit" />
+</form>
+
+</body>
+</html>
